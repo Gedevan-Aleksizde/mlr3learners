@@ -32,9 +32,8 @@ LearnerRegrGlmnet = R6Class("LearnerRegrGlmnet",
     #' Creates a new instance of this [R6][R6::R6Class] class.
     initialize = function() {
       ps = ParamSet$new(list(
-        ParamFct$new("family",
-          default = "gaussian", levels = c("gaussian", "poisson"),
-          tags = "train"),
+        ParamUty$new("family",
+          default = "gaussian", tags = "train"),
         ParamUty$new("offset", default = NULL, tags = "train"),
         ParamDbl$new("alpha", default = 1, lower = 0, upper = 1, tags = "train"),
         ParamFct$new("type.measure",
